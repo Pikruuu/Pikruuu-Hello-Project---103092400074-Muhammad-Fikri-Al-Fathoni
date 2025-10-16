@@ -2,16 +2,16 @@ package main
 
 import "fmt"
 
-const arrMax int = 999
+const arrMax int = 999 //deklarasi Array
 
-type produk struct {
+type produk struct { //struktur data variabel produk
 	kodeProduk  int
 	namaProduk  string
 	stokProduk  int
 	hargaProduk int
 }
 
-type bon struct {
+type bon struct { //struktur data bon
 	noTransaksi  int
 	member       string
 	belanja      [arrMax]produk
@@ -49,11 +49,11 @@ var data = tabtab{
 }
 
 func main() {
-	//var data tabtab
+	var data tabtab
 	loginKaryawan(&data)
 }
 
-func listMenu() {
+func listMenu() { 
 	fmt.Println("========== L I S T * M E N U ==========")
 	fmt.Println("1. Transaksi")
 	fmt.Println("2. Tambah Produk")
@@ -940,4 +940,5 @@ func totalOmzet(A tabtab){
 		}
 	}
 	fmt.Println("Total Omzet: ", tempTotal)
+
 }
